@@ -1,0 +1,62 @@
+[
+  {
+    "name": "get_taxon",
+    "description": "Resolve a marine species/genus/family name against OBIS to its taxon record (taxon ID, rank, accepted name, kingdom/phylum/family/genus, and total occurrence-record count). OBIS = global ocean biodiversity occurrence database; complements GBIF with a marine focus. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Scientific name, e.g. \"Orcinus orca\" or \"Delphinidae\"."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "find_occurrences",
+    "description": "Find georeferenced marine occurrence records (latitude, longitude, date, depth, country, locality, basis of record) for a scientific name from OBIS. Optionally filter by date range. Returns the total match count plus a sample of records.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "scientificname": {
+          "type": "string",
+          "description": "Scientific name to search occurrences for, e.g. \"Orcinus orca\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max records to return (default 20, max 100)."
+        },
+        "startdate": {
+          "type": "string",
+          "description": "Earliest event date, YYYY-MM-DD (optional)."
+        },
+        "enddate": {
+          "type": "string",
+          "description": "Latest event date, YYYY-MM-DD (optional)."
+        }
+      },
+      "required": [
+        "scientificname"
+      ]
+    }
+  },
+  {
+    "name": "get_statistics",
+    "description": "Get aggregate OBIS statistics for a marine taxon: total occurrence records, distinct species/taxa, contributing datasets, and the observed year range.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "scientificname": {
+          "type": "string",
+          "description": "Scientific name to summarize, e.g. \"Orcinus orca\"."
+        }
+      },
+      "required": [
+        "scientificname"
+      ]
+    }
+  }
+]
