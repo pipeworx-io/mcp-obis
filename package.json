@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-obis",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "OBIS (Ocean Biodiversity Information System) MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "obis",
     "gatewaySlug": "obis",
-    "sourceHash": "v1-fffef81425c56b6b0788fde6222e4cf8556fb7f50208d38dd02fd3764476500a",
-    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
+    "sourceHash": "v1-d870f0ade39a6f4a3dedf405a3ac4fd4cbd5906b49df2604ca7e1907d39c2b94",
+    "sourceCommit": "bed7faa04e7276899b5e3870ef11c98625371f2b"
   }
 }
